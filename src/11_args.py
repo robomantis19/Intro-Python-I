@@ -13,6 +13,13 @@ print(f1(1, 2))
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
 # YOUR CODE HERE
+def f2(*arg):
+    
+    num = len(arg*)
+    for i in range(num):
+        if(i > 1): 
+            arg*[i]+arg*[i-1]
+
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
