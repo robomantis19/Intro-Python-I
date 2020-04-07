@@ -6,12 +6,12 @@
 def is_even():
     num = input("Enter a number: ")
     num = int(num)
-    if num % 2:
+    if num % 2 == 0 :
         print("Even!")
-    else if num % 3:
+    elif num % 3 == 0 :
         print("Odd")
 
-##---------------------------------------------*******-----*******--------
+
 
 
 
