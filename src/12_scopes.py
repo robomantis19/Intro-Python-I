@@ -22,8 +22,9 @@ def outer():
 
     def inner():
         y = 999
-
+        
     inner()
+    
 #---------------##--------------------
     # This prints 120. What do we have to change in inner() to get it to print
     # 999?
