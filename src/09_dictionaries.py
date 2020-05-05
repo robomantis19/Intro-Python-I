@@ -42,6 +42,12 @@ waypoints = [
 # waypoints list.
 
 # YOUR CODE HERE
+waypoints.append({"lat": 42, "lon": -122, "name":"random place"})
+print(waypoints)
+
 
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+for i in waypoints:
+    for j in i.values():
+        print(j)
