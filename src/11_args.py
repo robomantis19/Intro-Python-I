@@ -5,7 +5,9 @@
 # the sum. This is what you'd consider to be a regular, normal function.
 
 # YOUR CODE HERE
-
+def f1(input1, input2): 
+    the_sum = input1 + input2
+    return the_sum
 print(f1(1, 2))
 
 # Write a function f2 that takes any number of integer arguments and prints the
@@ -13,6 +15,16 @@ print(f1(1, 2))
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
 # YOUR CODE HERE
+def f2(*args):
+    
+    if len(str(args)) == 1: 
+        print(args)
+    
+    elif len(args) > 1: 
+        the_sum = 0
+        for i in range(len(args)): 
+            the_sum += args[i] 
+        return the_sum
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -30,6 +42,12 @@ print(f2(a))    # Should print 22
 # Note: Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
+def f3(one, two=None): 
+    if one and two == None: 
+        return one + 1
+    if one and two: 
+        return one + two
+
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
@@ -48,6 +66,13 @@ print(f3(8))     # Should print 9
 # Should print
 # key: a, value: 12
 # key: b, value: 30
+def f4(input1=None, **kwargs): 
+    if input1:
+        for key, val in input1.items():  
+            print({"key": key, "value": val})
+    for key, val in kwargs.items():
+        
+        print({"key": key, "value": val})
 f4(a=12, b=30)
 
 # Should print
