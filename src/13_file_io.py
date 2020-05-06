@@ -9,6 +9,15 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
+
+file = open('foo.txt', 'r')
+for line in file: 
+    print(line)
+
+
+
+
+
 # YOUR CODE HERE
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -17,3 +26,13 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+
+file2 = open('bar.txt', 'w')
+file2.write('This is line one \n')
+file2.write('This is line two \n')
+file2.write('This is line three \n')
+file2.close()
+
+file2 = open("bar.txt", 'r')
+print(file2.read())
+
